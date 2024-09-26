@@ -1,0 +1,14 @@
+diff --git a/gutenberg.install b/gutenberg.install
+index 40e47fe..8c3d796 100644
+--- a/gutenberg.install
++++ b/gutenberg.install
+@@ -327,7 +327,4 @@ function _gutenberg_update_synced_patterns_view() {
+   if (version_compare(\Drupal::VERSION, '10', '<')) {
+     return;
+   }
+-
+-  $module_cfg = \Drupal::configFactory()->getEditable('views.view.reusable_blocks');
+-  $module_cfg->set('display.default.display_options.style.type', 'grid_responsive')->save();
+-}
+\ No newline at end of file
++}

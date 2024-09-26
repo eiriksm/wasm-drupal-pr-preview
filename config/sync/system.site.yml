@@ -2,7 +2,7 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 5363d44e-9940-40bd-9b37-b20ff7c109de
-name: 'Drush Site-Install'
+name: 'Drupal wasm PR demo'
 mail: admin@example.com
 slogan: ''
 page:
