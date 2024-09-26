@@ -1,2 +1,4 @@
 [build]
   command = "php --version"
+[build.environment]
+  PHP_VERSION = "8.3"
