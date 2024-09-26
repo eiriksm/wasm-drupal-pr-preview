@@ -1,0 +1,15 @@
+uuid: 908f9fdb-de2b-456e-8861-6951b6ceb535
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.pattern_categories
+_core:
+  default_config_hash: ubRGxADCDExzgkufoibVvMmTMnpjanHml1TzsyyTDn4
+id: taxonomy_term.pattern_categories.default
+targetEntityType: taxonomy_term
+bundle: pattern_categories
+mode: default
+content: {  }
+hidden:
+  description: true
