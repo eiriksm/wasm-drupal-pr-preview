@@ -1,0 +1,2 @@
+# Avoid exporting the public folder.
+/public export-ignore

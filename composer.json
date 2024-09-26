@@ -24,8 +24,18 @@
         "drush/drush": "^13.2"
     },
     "scripts": {
+        "test": [
+            "echo 'todo'"
+        ],
         "site-install": [
             "drush site:install --existing-config -y"
+        ],
+        "build-wasm": [
+            "composer install --no-dev --optimize-autoloader",
+            "@composer site-install",
+            "#Prune some unneded tests so the bundle is smaller",
+            "find . -depth -type d -name tests -exec rm -r -f '{}' ';'",
+            "composer archive --dir=. --file=public/assets/build --format=zip"
         ]
     },
     "conflict": {
@@ -60,6 +70,11 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            },
+            "file-mapping": {
+                "[project-root]/.gitattributes": {
+                    "append": "assets/gitattributes-extra"
+                }
             }
         },
         "installer-paths": {
