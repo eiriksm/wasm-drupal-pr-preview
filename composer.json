@@ -23,6 +23,11 @@
         "drupal/gutenberg": "^3.0",
         "drush/drush": "^13.2"
     },
+    "scripts": {
+        "site-install": [
+            "drush site:install --existing-config -y"
+        ]
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
@@ -47,6 +52,9 @@
                 "#3463572: SQLite install tasks requires the file_system service": "./patches/core/8913.patch",
                 "Remove warnings about opcache and 32-bit integers": "./patches/core/system-reqs-wasm.patch",
                 "Remove permission hardening warning": "./patches/core/skip-permission-hardening-warning.patch"
+            },
+            "drupal/gutenberg": {
+                "Fix": "./patches/gutenberg_fix_install_v2.diff"
             }
         },
         "drupal-scaffold": {
