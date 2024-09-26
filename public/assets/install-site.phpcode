@@ -1,0 +1,36 @@
+<?php
+
+$stdErr = fopen('php://stderr', 'w');
+
+set_error_handler(function(...$args) use($stdErr, &$errors){
+    fwrite($stdErr, print_r($args,1));
+});
+
+$flavor = file_get_contents('/config/flavor.txt');
+$docroot = '/persist/' . $flavor;
+
+$install_params = \json_decode(
+    file_get_contents("/config/$flavor-install-params.json") ?: [],
+    true
+);
+
+chdir($docroot . '/web');
+
+if (is_dir('sites/default')) {
+    chmod('sites/default', 0775);
+}
+if (is_file('sites/default/settings.php')) {
+    chmod('sites/default/settings.php', 0664);
+
+}
+if (!is_dir('sites/default/files/css') && !mkdir('sites/default/files/css') && !is_dir('sites/default/files/css')) {
+    throw new \RuntimeException(sprintf('Directory "%s" was not created', 'sites/default/files/css'));
+}
+if (!is_dir('sites/default/files/js') && !mkdir('sites/default/files/js') && !is_dir('sites/default/files/js')) {
+    throw new \RuntimeException(sprintf('Directory "%s" was not created', 'sites/default/files/js'));
+}
+
+print json_encode([
+    'message' => "Installed",
+    'type' => 'install',
+], JSON_THROW_ON_ERROR) . PHP_EOL;
