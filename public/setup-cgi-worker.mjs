@@ -100,7 +100,15 @@ export default function setupCgiWorker(worker, PhpCgiWorker, prefix, docroot, ty
             action: 'service_worker_activated'
         })
     });
-    worker.addEventListener('fetch',    event => php.handleFetchEvent(event));
+    worker.addEventListener('fetch',    event => {
+      const url = new URL(event.request.url);
+      if (url.pathname.endsWith('.so') || url.pathname.endsWith('.zip') || url.pathname.endsWith('.phpcode') || url.pathname.endsWith('.wasm')) {
+          // Don't download it. These are basically fetch from another service worker,
+          // and never something we want to pass to the CGI worker.
+          return;
+      }
+      return php.handleFetchEvent(event);
+    });
     worker.addEventListener('message',  event => php.handleMessageEvent(event));
 
     return php
