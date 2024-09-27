@@ -139,7 +139,11 @@ export class PhpCgiBase
 		}
 		else
 		{
-			return fetch(event.request);
+			if (url.pathname.endsWith('.so') || url.pathname.endsWith('.zip') || url.pathname.endsWith('.phpcode') || url.pathname.endsWith('.wasm')) {
+        // Don't download it.
+        return;
+      }
+      return fetch(event.request);
 		}
 	}
 
