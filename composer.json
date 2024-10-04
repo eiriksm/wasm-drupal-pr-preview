@@ -21,7 +21,9 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.3",
         "drupal/gutenberg": "^3.0",
-        "drush/drush": "^13.2"
+        "drush/drush": "^13.2",
+        "eiriksm/build-drupal-wasm": "dev-main",
+        "php-tuf/composer-stager": "^2-beta"
     },
     "scripts": {
         "test": [
@@ -46,23 +48,18 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "eiriksm/build-drupal-wasm": true,
             "php-http/discovery": true,
-            "cweagans/composer-patches": true
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
     "extra": {
         "patches": {
-            "drupal/core": {
-                "Remove renderer support for fibers": "./patches/core/renderer-remove-fibers.patch",
-                "#3463572: SQLite install tasks requires the file_system service": "./patches/core/8913.patch",
-                "Remove warnings about opcache and 32-bit integers": "./patches/core/system-reqs-wasm.patch",
-                "Remove permission hardening warning": "./patches/core/skip-permission-hardening-warning.patch"
-            },
             "drupal/gutenberg": {
                 "Fix": "./patches/gutenberg_fix_install_v2.diff"
             }
