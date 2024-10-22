@@ -1,17 +1,17 @@
-uuid: 86cf0653-9f4c-42d7-9290-8defa999d373
+uuid: 7dd5b0d6-0b07-4ec1-964b-53bdd6cb357a
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
   theme:
-    - olivero
+    - gutenberg_starter
 _core:
-  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
-id: olivero_search_form_wide
-theme: olivero
-region: secondary_menu
-weight: -5
+  default_config_hash: x78YjjKt145MODKPsCnzBO50fp_i4Y4PqZSwbdZYEAg
+id: gutenberg_starter_search_form_wide
+theme: gutenberg_starter
+region: header
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

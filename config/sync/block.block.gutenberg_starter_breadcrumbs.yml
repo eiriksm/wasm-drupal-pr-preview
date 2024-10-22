@@ -1,17 +1,17 @@
-uuid: e3685a82-1660-46cc-9959-324ca6dfe879
+uuid: 8aaef748-b4e7-4d47-a017-1be6ab4e15d5
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - gutenberg_starter
 _core:
-  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
-id: olivero_breadcrumbs
-theme: olivero
+  default_config_hash: zHdwtEz6MbRgdG8A0BQD6PKjm2cefepEef54BQUY7QY
+id: gutenberg_starter_breadcrumbs
+theme: gutenberg_starter
 region: breadcrumb
-weight: 0
+weight: -8
 provider: null
 plugin: system_breadcrumb_block
 settings:

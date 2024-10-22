@@ -1,4 +1,4 @@
-uuid: 570603ae-0715-4116-8e6c-5982f399016b
+uuid: 39597082-8618-41f6-bbfb-30a70945c826
 langcode: en
 status: true
 dependencies:
@@ -7,13 +7,13 @@ dependencies:
   module:
     - system
   theme:
-    - olivero
+    - gutenberg_starter
 _core:
-  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
-id: olivero_main_menu
-theme: olivero
-region: primary_menu
-weight: 0
+  default_config_hash: EnTj9MBKg0Mi7addiZEHPbypf3_xBspk_jDUSQI9DWk
+id: gutenberg_starter_main_menu
+theme: gutenberg_starter
+region: menu
+weight: -6
 provider: null
 plugin: 'system_menu_block:main'
 settings:
