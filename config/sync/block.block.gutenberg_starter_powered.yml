@@ -1,17 +1,17 @@
-uuid: d9eda221-9aec-4bce-a8bb-65a7345a7154
+uuid: 5d10fae0-6737-4011-ae4d-83daed481ab8
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - olivero
+    - gutenberg_starter
 _core:
-  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
-id: olivero_powered
-theme: olivero
-region: footer_bottom
-weight: 0
+  default_config_hash: N6IEWl8GkGMNZJkLEohF9PxZs9mmZbj3QleaXdCdH0Y
+id: gutenberg_starter_powered
+theme: gutenberg_starter
+region: footer
+weight: -6
 provider: null
 plugin: system_powered_by_block
 settings:

@@ -1,0 +1,29 @@
+uuid: 1160d7d1-b33f-4e5a-b4fa-f2a4065330ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: KUf34a9bPnfEZyv9BSfitrGFa7bjT2fl95z2i1gj7Qg
+id: gutenberg_starter_pagetitle
+theme: gutenberg_starter
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article

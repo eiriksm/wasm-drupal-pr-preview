@@ -46,6 +46,7 @@ module:
   views: 10
   minimal: 1000
 theme:
-  olivero: 0
   claro: 0
+  stable9: 0
+  gutenberg_starter: 0
 profile: minimal

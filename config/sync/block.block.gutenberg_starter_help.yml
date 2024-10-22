@@ -1,0 +1,22 @@
+uuid: c6ba8216-576e-4d00-9834-7ce785f3879d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gutenberg_starter
+_core:
+  default_config_hash: ZY2ctexVa9q5YGtlLBMfzk9odps83l3lOAa29MAHmDg
+id: gutenberg_starter_help
+theme: gutenberg_starter
+region: content
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

@@ -1,15 +1,15 @@
-uuid: 3ca18100-764e-431e-9369-2448ca53a629
+uuid: 476f907c-ed50-4071-8d00-f376c9f17b3d
 langcode: en
 status: true
 dependencies:
   theme:
-    - olivero
+    - gutenberg_starter
 _core:
-  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
-id: olivero_secondary_local_tasks
-theme: olivero
-region: highlighted
-weight: -2
+  default_config_hash: lZDtHSpfh7p6-kkmuRbqLm74aTNXgIICHmuvMKeOlGo
+id: gutenberg_starter_secondary_local_tasks
+theme: gutenberg_starter
+region: tabs
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:

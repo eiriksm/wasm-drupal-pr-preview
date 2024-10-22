@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.3",
         "drupal/gutenberg": "^3.0",
+        "drupal/gutenberg_starter": "^1.1",
         "drush/drush": "^13.2",
         "eiriksm/build-drupal-wasm": "dev-main",
         "php-tuf/composer-stager": "^2-beta"
